@@ -1,3 +1,6 @@
+//  author: Charlotte Moreland
+//  assignment: final group project
+
 /** @file */
 #include <iostream>
 
@@ -26,6 +29,6 @@ void fn(){
 }
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    
     return 0;
 }

@@ -1,5 +1,5 @@
-#ifndef WAVEHEADER_H
-#define WAVEHEADER_H
+#ifndef WAVHEADER_H
+#define WAVHEADER_H
 
 
 // This header copied from https://gist.github.com/Jon-Schneider/8b7c53d27a7a13346a643dac9c19d34f
@@ -21,7 +21,7 @@
 41-44	File size (data)	Size of the data section.
  */
 
-typedef struct waveHeader{
+typedef struct wav_header{
     
    // RIFF Header
     char riff_header[4]; // Contains "RIFF"
@@ -46,5 +46,5 @@ typedef struct waveHeader{
 
 
 
-} waveHeader;
-#endif //WAVEHEADER_H
+} wav_header;
+#endif //WAVHEADER_H

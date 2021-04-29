@@ -1,18 +1,19 @@
 #ifndef WAV_H
 #define WAV_H
 
-#include "waveHeader.h"
+#include "wavHeader.h"
+#include <iostream>
 
-class wav{
+class Wav{
 
 private:
     unsigned char* buffer = NULL;
-    waveHeader wav_header;
+    wavHeader wav_header;
 public:
     void readFile(const std::string &filename);
     void writeFile(const std::string &outFileName);
 
-    virtual ~Wav();
+    virtual ~Wav();   
 
     unsigned char *getBuffer();
     int getBufferSize() const;
