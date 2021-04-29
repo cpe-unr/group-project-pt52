@@ -23,7 +23,7 @@
 
 typedef struct wav_header{
     
-   // RIFF Header
+ // RIFF Header
     char riff_header[4]; // Contains "RIFF"
     int wav_size; // Size of the wav portion of the file, which follows the first 8 bytes. File size - 8
     char wave_header[4]; // Contains "WAVE"
@@ -42,9 +42,6 @@ typedef struct wav_header{
     char data_header[4]; // Contains "data"
     int data_bytes; // Number of bytes in data. Number of samples * num_channels * sample byte size
     // char bytes[]; // Remainder of wave file is bytes
-
-
-
 
 } wav_header;
 #endif //WAVHEADER_H

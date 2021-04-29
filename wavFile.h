@@ -16,7 +16,7 @@ private:
 
     wav_header wav_header;
 
-    unsigned char* buffer = NULL;
+    signed short* buffer = NULL;
 
 public:
 
@@ -26,7 +26,7 @@ public:
 
     virtual ~wavFile();
 
-    unsigned char *getBuffer();
+    signed short *getBuffer();
 
     int getBufferSize() const;
 

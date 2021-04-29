@@ -9,7 +9,7 @@ void wavFile::readFile(const std::string &fileName) {
     std::ifstream file(fileName,std::ios::binary | std::ios::in);
     if(file.is_open()){
         file.read((char*)&wav_header, sizeof(wav_header));
-        buffer = new unsigned char[wav_header.data_bytes];
+        buffer = new signed short[wav_header.data_bytes];
         file.read((char*)buffer, wav_header.data_bytes);
         file.close();
     }
@@ -22,7 +22,7 @@ void wavFile::writeFile(const std::string &outFileName) {
     outFile.close();
 }
 
-unsigned char *wavFile::getBuffer(){
+signed short *wavFile::getBuffer(){
     return buffer;
 }
 

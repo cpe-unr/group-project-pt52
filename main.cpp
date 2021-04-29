@@ -3,6 +3,7 @@
 
 /** @file */
 #include <iostream>
+#include "wavFile.h"
 
 /**
  * \brief   The function bar.
