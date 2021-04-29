@@ -5,6 +5,7 @@
 #define CSVWRITER_H
 
 #include <iostream>
+#include <fstream>
 
 class CSVWriter {
 
