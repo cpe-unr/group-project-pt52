@@ -10,6 +10,6 @@ void NoiseGate::processBuffer(unsigned char *buffer, int bufferSize){
     }
 }
 
-NoiseGate::NoiseGate(uint_t threshold) : threshold(threshold){
-    
+NoiseGate::NoiseGate(uint8_t threshold) : threshold(threshold){
+
 }
