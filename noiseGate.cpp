@@ -1,3 +1,4 @@
+
 #include "noiseGate.h"
 
 const uint8_t ZERO = 128;

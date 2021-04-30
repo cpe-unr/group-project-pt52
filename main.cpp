@@ -1,5 +1,8 @@
+//  author: Charlotte Moreland
+//  assignment: final group project
+
 /** @file */
-#include <iostream>
+
 
 /**
  * \brief   The function bar.
@@ -25,7 +28,15 @@ void fn(){
 
 }
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+#include <iostream>
+#include "wavFile.h"
+#include "directory.h"
+
+int main(int argc, char** argv) {
+
+    Directory::list_dir(argv[1]);
+
     return 0;
+
 }
+
