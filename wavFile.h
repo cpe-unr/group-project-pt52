@@ -9,6 +9,7 @@
 #include <iostream>
 #include "fstream"
 #include "wavHeader.h"
+#include <dirent.h>
 
 class wavFile {
 
@@ -16,7 +17,9 @@ private:
 
     wav_header wav_header;
 
-    signed short* buffer = NULL;
+    unsigned char* buffer8 = NULL;
+
+    short* buffer16 = NULL;
 
 public:
 
@@ -26,7 +29,9 @@ public:
 
     virtual ~wavFile();
 
-    signed short *getBuffer();
+    unsigned char *getBuffer8();
+
+    short *getBuffer16();
 
     int getBufferSize() const;
 

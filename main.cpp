@@ -2,8 +2,7 @@
 //  assignment: final group project
 
 /** @file */
-#include <iostream>
-#include "wavFile.h"
+
 
 /**
  * \brief   The function bar.
@@ -29,7 +28,15 @@ void fn(){
 
 }
 
-int main() {
-    
+#include <iostream>
+#include "wavFile.h"
+#include "directory.h"
+
+int main(int argc, char** argv) {
+
+    Directory::list_dir(argv[1]);
+
     return 0;
+
 }
+
