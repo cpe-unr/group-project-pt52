@@ -9,8 +9,9 @@ class NoiseGate : IProcessable{
 
 
 public:
+	template <typename T>
 
-	void processBuffer(unsigned char *buffer, int bufferSize);
+	void processBuffer(T buffer, int bufferSize);
 
 	NoiseGate(uint8_t threshold);
 
