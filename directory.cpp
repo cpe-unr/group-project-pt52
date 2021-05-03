@@ -4,18 +4,24 @@
 #include "directory.h"
 
 void Directory::list_dir(const char *path) {
+    
     struct dirent *entry;
+
+    //  Directory is created from dirent.h library
     DIR *dir = opendir(path);
     if (dir == NULL) {
         return;
     }
 
+    //  Reads in each file in the directory
     while ((entry = readdir(dir)) != NULL) {
         wavFile wav;
+
+        //  error occuring 
         wav.readFile(entry->d_name);
-        std::cout << wav.getBufferSize() << std::endl;
     }
 
+    //  closes the directory
     closedir(dir);
 }
 

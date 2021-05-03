@@ -1,4 +1,4 @@
-#ifdef ECHO_H
+#ifndef ECHO_H
 #define ECHO_H
 
 #include "IProcessable.h"

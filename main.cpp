@@ -31,10 +31,10 @@ void fn(){
 #include <iostream>
 #include "wavFile.h"
 #include "directory.h"
+#include "metadata.h"
 
 int main(int argc, char** argv) {
 
-    Directory::list_dir(argv[1]);
 
     return 0;
 

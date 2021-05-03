@@ -3,11 +3,11 @@
 
 //  Used code from Programming Assignment 3
 
-#ifndef READFILE_H
-#define READFILE_H
+#ifndef WAVFILE_H
+#define WAVFILE_H
 
 #include <iostream>
-#include "fstream"
+#include <fstream>
 #include "wavHeader.h"
 #include <dirent.h>
 
@@ -17,9 +17,9 @@ private:
 
     wav_header wav_header;
 
-    unsigned char* buffer8 = NULL;
+    unsigned char* buffer = NULL;
 
-    short* buffer16 = NULL;
+    short* shortBuffer = NULL;
 
 public:
 
@@ -29,12 +29,12 @@ public:
 
     virtual ~wavFile();
 
-    unsigned char *getBuffer8();
+    unsigned char *getBuffer();
 
-    short *getBuffer16();
+    short *getShortBuffer();
 
     int getBufferSize() const;
 
 };
 
-#endif
+#endif  //  WAVFILE_H

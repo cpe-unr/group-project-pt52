@@ -6,52 +6,65 @@
 #include "wavFile.h"
 
 void wavFile::readFile(const std::string &fileName) {
+
     std::ifstream file(fileName,std::ios::binary | std::ios::in);
+
     if(file.is_open()){
+
         file.read((char*)&wav_header, sizeof(wav_header));
 
-        if(wav_header.bit_depth == 8) {
-            buffer8 = new unsigned char[wav_header.data_bytes];
-            file.read((char*)buffer8, wav_header.data_bytes);
-        }
-        else if(wav_header.bit_depth == 16) {
-            buffer16 = new short[wav_header.data_bytes];
-            file.read((char*)buffer16, wav_header.data_bytes);
-        }
+        buffer = new unsigned char[wav_header.data_bytes];
+
+        file.read((char*)buffer, wav_header.data_bytes);
 
         file.close();
     }
+
 }
 
 void wavFile::writeFile(const std::string &outFileName) {
-    std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
-    outFile.write((char*)&wav_header,sizeof(wav_header));
-    
 
-    if(wav_header.bit_depth == 8) {
-        
-    }
-    else if(wav_header.bit_depth == 16) {
-        outFile.write((char*)buffer16, wav_header.data_bytes);
-    }
+    std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
+
+    outFile.write((char*)&wav_header,sizeof(wav_header));
+
+    outFile.write((char*)buffer, wav_header.data_bytes);
 
     outFile.close();
+
 }
 
-unsigned char *wavFile::getBuffer8(){
-    return buffer8;
+unsigned char *wavFile::getBuffer(){
+
+    return buffer;
+
+}
+
+short *wavFile::getShortBuffer() {
+    //  16 bit buffer is cast into a short rather than an unsigned char
+    short* shortBuffer = reinterpret_cast<short*>(buffer);
+
+    return shortBuffer;
+
 }
 
 int wavFile::getBufferSize() const {
+
     return wav_header.data_bytes;
+
 }
 
+//  deconstructor deletes buffer
 wavFile::~wavFile() {
-    if(buffer8 != NULL) {
-        delete[] buffer8;
+
+    if(buffer != NULL) {
+
+        delete[] buffer;
+
     }
-    else if(buffer16 != NULL) {
-        delete[] buffer16;
-    }
-        
+    else if(shortBuffer != NULL) {
+
+        delete[] shortBuffer;
+
+    }  
 }
