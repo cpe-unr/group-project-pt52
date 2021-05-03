@@ -1,3 +1,4 @@
+/*
 #include "echo.h"
 #include <iostream>
 
@@ -28,3 +29,4 @@ void Echo::processBuffer(signed short *buffer, int bufferSize){
         buffer[n + delay] = (signed short)(round(value));
     }
 }
+*/

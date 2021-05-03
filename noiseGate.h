@@ -11,7 +11,26 @@ class NoiseGate : IProcessable{
 public:
 	template <typename T>
 
-	void processBuffer(T buffer, int bufferSize);
+	void processBuffer(T buffer, int bufferSize){
+
+		if(typeid(T) == typeid(unsigned char)){
+
+			for(int i = 1; i < bufferSize; i++){
+        		if(buffer[i] > (ZERO - threshold) && buffer[i] < (ZERO + threshold)){
+        			buffer[i] = ZERO;
+        		}
+    		}
+		}
+
+				if(typeid(T) == typeid(signed short)){
+
+			for(int i = 1; i < bufferSize; i++){
+        		if(buffer[i] > (ZERO - threshold) && buffer[i] < (ZERO + threshold)){
+        			buffer[i] = ZERO;
+        		}
+    		}
+		}
+	}
 
 	NoiseGate(uint8_t threshold);
 

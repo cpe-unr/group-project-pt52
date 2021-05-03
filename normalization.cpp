@@ -1,3 +1,4 @@
+/*
 #include "normalization.h"
 
 using namespace std;
@@ -23,3 +24,4 @@ void Normalization::processBuffer(unsigned char *buffer, int bufferSize){
     }
 
 }
+*/
