@@ -1,5 +1,5 @@
-wav: main.o wavFile.o CSVWriter.o directory.o userInter.o metadata.o echo.o noiseGate.o normalization.o
-	g++ -std=c++11 -o wav main.o wavFile.o directory.o metadata.o userInter.o CSVWriter.o echo.o noiseGate.o normalization.o
+wav: main.o wavFile.o CSVWriter.o directory.o userInter.o metadata.o fpLib.a
+	g++ -std=c++11 -o wav main.o wavFile.o directory.o metadata.o userInter.o CSVWriter.o fpLib.a
 
 main.o: main.cpp wavFile.h directory.h 
 	g++ -std=c++11 -c main.cpp
@@ -19,14 +19,26 @@ directory.o: directory.cpp directory.h
 metadata.o: metadata.cpp metadata.h wavHeader.h
 	g++ -std=c++11 -c metadata.cpp
 
-echo.o: echo.cpp echo.h iProcessable.h 
-	g++ -std=c++11 -c echo.cpp
+eightBitEcho.o: eightBitEcho.h iProcessable.h 
+	g++ -std=c++11 -c eightBitEcho.h
 
-noiseGate.o: noiseGate.cpp noiseGate.h iProcessable.h 
-	g++ -std=c++11 -c noiseGate.cpp
+eightBitNoiseGate.o: eightBitNoiseGate.h iProcessable.h 
+	g++ -std=c++11 -c eightBitNoiseGate.h
 
-normalization.o: normalization.cpp normalization.h iProcessable.h 
-	g++ -std=c++11 -c normalization.cpp
+eightBitNormalization.o: eightBitNormalization.h iProcessable.h 
+	g++ -std=c++11 -c eightBitNormalization.h
+
+sixteenBitEcho.o: sixteenBitEcho.h iProcessable.h 
+	g++ -std=c++11 -c sixteenBitEcho.h
+
+sixteenBitNoiseGate.o: sixteenBitNoiseGate.h iProcessable.h 
+	g++ -std=c++11 -c BitNoiseGate.h
+
+sixteenBitNormalization.o: sixteenBitNormalization.h iProcessable.h 
+	g++ -std=c++11 -c sixteenBitNormalization.h
+
+fpLib.a: eightBitEcho.o eightBitNoiseGate.o eightBitNormalization.o sixteenBitEcho.o sixteenBitNoiseGate.o sixteenBitNormalization.o
+	ar suvr fpLib.a eightBitEcho.o eightBitNoiseGate.o eightBitNormalization.o sixteenBitEcho.o sixteenBitNoiseGate.o sixteenBitNormalization.o
 
 clean:
-	rm *.o wav
+	rm *.o *.a wav

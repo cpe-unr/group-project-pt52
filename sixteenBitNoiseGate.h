@@ -13,6 +13,14 @@ class sixteenBitNoiseGate : public IProcessable{
 
 
 public:
+    /**
+     * @brief Takes in a buffer of any datatype and creates a noise gate to help filter out back ground noise for 16 bit files.
+     * 
+     * @tparam T - Should be signed short to process 16 bit file.
+     * @param buffer - Can be any data type pointer due to template. 
+     * @param bufferSize - integer
+     */
+
 	template <typename T>
 
 	void processBuffer(T *buffer, int bufferSize){
@@ -25,8 +33,13 @@ public:
     		}
     	}
 	}
+    /**
+     * @brief - Construct a new eight Bit Noise Gate object
+     * 
+     * @param threshold - uint16_t data type is the same as unsigned char
+     */
 
-	sixteenBitNoiseGate(uint8_t threshold);
+	sixteenBitNoiseGate(uint16_t threshold);
 
 
 };

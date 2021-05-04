@@ -11,6 +11,14 @@
 class sixteenBitNormalization : public IProcessable {
 
 public:
+    /**
+     * @brief - Takes in a buffer of any datatype and normalizes the buffer to make it louder.
+     * 
+     * @tparam T - Should be signed short to process 16 bit file.
+     * @param buffer - Can be any data type pointer due to template.
+     * @param bufferSize - integer
+     */
+
     template <typename T>
 
    void processBuffer(T *buffer, int bufferSize){
