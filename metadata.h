@@ -8,6 +8,7 @@
 #include <fstream>
 #include <sstream>
 #include "wavHeader.h"
+#include "userInter.h"
 
 class metadata {
 

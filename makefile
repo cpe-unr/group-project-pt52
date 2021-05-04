@@ -1,5 +1,5 @@
-wav: main.o wavFile.o CSVWriter.o directory.o metadata.o echo.o noiseGate.o normalization.o
-	g++ -std=c++11 -o wav main.o wavFile.o directory.o metadata.o
+wav: main.o wavFile.o CSVWriter.o directory.o userInter.o  metadata.o echo.o noiseGate.o normalization.o
+	g++ -std=c++11 -o wav main.o wavFile.o directory.o metadata.o userInter.o
 
 main.o: main.cpp wavFile.h directory.h 
 	g++ -std=c++11 -c main.cpp
@@ -9,6 +9,9 @@ wavfile.o: wavFile.cpp wavFile.h wavHeader.h
 
 CSVWriter.o: CSVWriter.cpp CSVWriter.h 
 	g++ -std=c++11 -c CSVWriter.cpp
+
+userInter.o: userInter.cpp userInter.h wavHeader.h
+	g++ -std=c++11 -c userInter.cpp
 
 directory.o: directory.cpp directory.h
 	g++ -std=c++11 -c directory.cpp

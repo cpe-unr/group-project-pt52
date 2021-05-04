@@ -19,7 +19,7 @@
 35-36	16	Bits per sample
 37-40	“data”	“data” chunk header. Marks the beginning of the data section.
 41-44	File size (data)	Size of the data section.
-47-49   Metadata 
+47-50   Metadata 
  */
 
 typedef struct wav_header{
@@ -47,6 +47,7 @@ typedef struct wav_header{
     // Metadata
     std::string title;
     std::string artist;
+    std::string genre;
 
 } wav_header;
 #endif //WAVHEADER_H

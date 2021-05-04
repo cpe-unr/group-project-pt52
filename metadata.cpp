@@ -6,7 +6,7 @@
 //  function to load metadata from the file given from directory/command line
 void metadata::getMetadata(const std::string &fileName) {
 
-    std::string tempstr;
+    std::string tempstr, error;
     
     std::istringstream iss(fileName);
 
@@ -30,6 +30,7 @@ void metadata::getMetadata(const std::string &fileName) {
                         wav.title = tempstr;
 
                     }
+
                     //  to find the artist of the wav file
                     if(tempstr == "IART" || tempstr == "iart") {
 
@@ -37,6 +38,19 @@ void metadata::getMetadata(const std::string &fileName) {
 
                         wav.artist = tempstr;
                     }
+
+                    if(tempstr == "IGNR" || tempstr == "ignr") {
+
+                        iss >> tempstr;
+
+                        wav.genre = tempstr;
+                    }
+
+                    else {
+                        UserInter::metaError();
+                    }
+                       
+                    
 
             }
 

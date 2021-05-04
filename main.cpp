@@ -32,9 +32,19 @@ void fn(){
 #include "wavFile.h"
 #include "directory.h"
 #include "metadata.h"
+#include "wavHeader.h"
+#include "userInter.h"
 
 int main(int argc, char** argv) {
 
+
+    if(argc != 2) {
+        UserInter::directError();
+    }
+    //  Seg fault when opening directory
+    //Directory::list_dir(argv[1]);
+
+    UserInter::modMeta();
 
     return 0;
 
