@@ -28,4 +28,4 @@ public:
             buffer[n + delay] = (unsigned char)(round(value));
         } 
     }
-#endif //8BITECHO_H
+#endif //EIGHTBITECHO_H
