@@ -2,7 +2,7 @@
 //Wyatt Young
 //Final Project
 
-#ifdef SIXTEENBITECHO_H
+#ifndef SIXTEENBITECHO_H
 #define SIXTEENBITECHO_H
 
 #include "IProcessable.h"
