@@ -11,7 +11,7 @@
 #include "wavHeader.h"
 #include <dirent.h>
 
-class wavFile {
+class WavFile {
 
 private:
 
@@ -27,7 +27,7 @@ public:
 
     void writeFile(const std::string &outFileName);
 
-    virtual ~wavFile();
+    virtual ~WavFile();
 
     unsigned char *getBuffer();
 

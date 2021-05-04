@@ -1,4 +1,4 @@
-/*
+
 #include "echo.h"
 #include <iostream>
 
@@ -7,12 +7,13 @@ void Echo::processBuffer(unsigned char *buffer, int bufferSize){
     float delayNum;
     float echoLevel = 0.5f;
     float value;
+    int ZERO = 0;
 
-    for(int i = 0; i < bufferSize - delay; i++){
+    for(float i = 0; i < bufferSize - delayNum; i++){
         num = (float)(buffer[i] - ZERO);
-        delayNum = (float)(buffer[i + delay] - ZERO);
+        delayNum = (float)(buffer[i + delayNum] - ZERO);
         value = num * echoLevel + delayNum * SCALE_FACTOR + ZERO;
-        buffer[n + delay] = (unsigned char)(round(value));
+        buffer[num + delayNum] = (unsigned char)(round(value));
     }
 }
 
@@ -29,4 +30,4 @@ void Echo::processBuffer(signed short *buffer, int bufferSize){
         buffer[n + delay] = (signed short)(round(value));
     }
 }
-*/
+

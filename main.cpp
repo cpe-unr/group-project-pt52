@@ -32,19 +32,77 @@ void fn(){
 #include "wavFile.h"
 #include "directory.h"
 #include "metadata.h"
+#include "wavFile.h"
 #include "wavHeader.h"
 #include "userInter.h"
+#include "echo.h"
+#include "normalization.h"
+#include "noiseGate.h"
 
 int main(int argc, char** argv) {
 
+    int i, choice;
+
+    std::string proc;
 
     if(argc != 2) {
         UserInter::directError();
     }
+
     //  Seg fault when opening directory
-    //Directory::list_dir(argv[1]);
+    Directory::list_dir(argv[1]);
+
 
     UserInter::modMeta();
+
+   choice = UserInter::chooseProcessor();
+
+    for (i=0; i < choice; i++) {
+
+        std::cout << "\nWhich processor would you like to use?\n(echo or normalization or noisegate)" << std::endl;
+            
+        std::cin >> proc;
+
+        if(proc == "echo") {
+
+            WavFile wav;
+            wav.readFile(argv[1]);
+            IProcessable *processor = new Echo();
+            processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
+            wav.writeFile(argv[1]); 
+
+            delete Echo();
+
+        }
+        if(proc == "normalization") {
+
+            WavFile wav;
+            wav.readFile(argv[1]);
+            IProcessable *processor = new Normalization();
+            processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
+            wav.writeFile(argv[1]); 
+
+            delete Normalization();
+
+        }
+        if(proc == "noisegate") {
+
+            WavFile wav;
+            wav.readFile(argv[1]);
+            IProcessable *processor = new NoiseGate();
+            processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
+            wav.writeFile(argv[1]); 
+
+            delete NoiseGate();
+
+        }
+            
+    }
+
+    //  couldn't get this to work with whole directory only single files
+    UserInter::fileName() = argv[1];
+
+
 
     return 0;
 

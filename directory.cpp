@@ -15,7 +15,7 @@ void Directory::list_dir(const char *path) {
 
     //  Reads in each file in the directory
     while ((entry = readdir(dir)) != NULL) {
-        wavFile wav;
+        WavFile wav;
 
         //  error occuring 
         wav.readFile(entry->d_name);

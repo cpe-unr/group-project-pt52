@@ -21,7 +21,7 @@ void UserInter::modMeta() {
 
     wav_header wav;
 
-    std::cout << "Would you like to modify metadata?\nEx: yes or no" << std::endl;
+    std::cout << "Would you like to modify metadata?\nExample: yes or no" << std::endl;
 
     std::cin >> mod;
 
@@ -63,4 +63,46 @@ void UserInter::modMeta() {
     }
 
     std::cout << wav.title << std::endl;
+}
+
+int UserInter::chooseProcessor() {
+
+    int i, choice;
+
+    std::string input, proc;
+
+    std::cout << "Would you like to use a processor?\nExample: yes or no" << std::endl;
+
+    std::cin >> input;
+
+    if (input == "yes") {
+
+        std::cout << "How many processors would you like to apply?\n(1 or 2 or 3)" << std::endl;
+
+        std::cin >> choice;
+
+        return choice;
+
+    }
+
+}
+
+std::string UserInter::fileName() {
+
+    std::string choice, newFile;
+
+    std::cout << "Would you like to choose a new filename?" << std::endl;
+
+    std::cin >> choice;
+
+    if(choice == "yes") {
+
+        std::cout << "New filename: ";
+
+        std::cin >> newFile;
+
+        return newFile;
+
+    }
+
 }

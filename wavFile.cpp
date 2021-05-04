@@ -5,7 +5,7 @@
 
 #include "wavFile.h"
 
-void wavFile::readFile(const std::string &fileName) {
+void WavFile::readFile(const std::string &fileName) {
 
     std::ifstream file(fileName,std::ios::binary | std::ios::in);
 
@@ -22,7 +22,7 @@ void wavFile::readFile(const std::string &fileName) {
 
 }
 
-void wavFile::writeFile(const std::string &outFileName) {
+void WavFile::writeFile(const std::string &outFileName) {
 
     std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
 
@@ -34,13 +34,13 @@ void wavFile::writeFile(const std::string &outFileName) {
 
 }
 
-unsigned char *wavFile::getBuffer(){
+unsigned char *WavFile::getBuffer(){
 
     return buffer;
 
 }
 
-short *wavFile::getShortBuffer() {
+short *WavFile::getShortBuffer() {
     //  16 bit buffer is cast into a short rather than an unsigned char
     short* shortBuffer = reinterpret_cast<short*>(buffer);
 
@@ -48,14 +48,14 @@ short *wavFile::getShortBuffer() {
 
 }
 
-int wavFile::getBufferSize() const {
+int WavFile::getBufferSize() const {
 
     return wav_header.data_bytes;
 
 }
 
 //  deconstructor deletes buffer
-wavFile::~wavFile() {
+WavFile::~WavFile() {
 
     if(buffer != NULL) {
 

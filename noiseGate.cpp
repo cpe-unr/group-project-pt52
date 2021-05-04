@@ -1,4 +1,4 @@
-/*
+
 #include "noiseGate.h"
 
 const uint8_t ZERO = 128;
@@ -14,4 +14,3 @@ void NoiseGate::processBuffer(T buffer, int bufferSize){
 NoiseGate::NoiseGate(uint8_t threshold) : threshold(threshold){
 
 }
-*/
