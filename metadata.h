@@ -14,6 +14,10 @@ class metadata {
 
 public:
     
+    /**
+     * Get metadata from files  
+     * @param fileName - a fileName to extract metadata
+     */
     void getMetadata(const std::string &fileName);
 
 };

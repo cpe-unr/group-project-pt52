@@ -1,5 +1,5 @@
-wav: main.o wavFile.o CSVWriter.o directory.o userInter.o  metadata.o echo.o noiseGate.o normalization.o
-	g++ -std=c++11 -o wav main.o wavFile.o directory.o metadata.o userInter.o
+wav: main.o wavFile.o CSVWriter.o directory.o userInter.o metadata.o echo.o noiseGate.o normalization.o
+	g++ -std=c++11 -o wav main.o wavFile.o directory.o metadata.o userInter.o CSVWriter.o echo.o noiseGate.o normalization.o
 
 main.o: main.cpp wavFile.h directory.h 
 	g++ -std=c++11 -c main.cpp

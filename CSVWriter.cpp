@@ -3,6 +3,7 @@
 
 #include "CSVWriter.h"
 
+
 void CSVWriter::outCSV(std::string out, std::string info1, std::string info2, std::string info3, std::string info4) {
 
     //  output of file object

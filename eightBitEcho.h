@@ -4,7 +4,7 @@
 
 
 
-#ifdef EIGHTBITECHO_H
+#ifndef EIGHTBITECHO_H
 #define EIGHTBITECHO_H
 
 #include "IProcessable.h"
@@ -28,4 +28,6 @@ public:
             buffer[n + delay] = (unsigned char)(round(value));
         } 
     }
+
+};
 #endif //EIGHTBITECHO_H

@@ -36,7 +36,6 @@ void fn(){
 #include "wavHeader.h"
 #include "userInter.h"
 #include "echo.h"
-#include "normalization.h"
 #include "noiseGate.h"
 
 int main(int argc, char** argv) {
