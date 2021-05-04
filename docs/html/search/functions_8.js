@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['processbuffer',['processBuffer',['../d8/d3f/classeightBitEcho.html#aae8b9ddf8b8688f25abe899f7e3b9650',1,'eightBitEcho::processBuffer()'],['../d6/d81/classeightBitNoiseGate.html#a2ae5893814bd427a1607e933ee733c48',1,'eightBitNoiseGate::processBuffer()'],['../d4/dbc/classeightBitNormalization.html#a206e0a9e9da56b79cffd50917ef26449',1,'eightBitNormalization::processBuffer()'],['../d9/d18/classIProcessable.html#aba2a96a03e596c8576b76919b52741db',1,'IProcessable::processBuffer()'],['../da/d9c/classsixteenBitEcho.html#a4576b25b5350661bdbb5b4048d55d6d2',1,'sixteenBitEcho::processBuffer()'],['../dd/d67/classsixteenBitNoiseGate.html#a27bdf787a56e96e7b6ff3f2edd86ca82',1,'sixteenBitNoiseGate::processBuffer()'],['../d7/d4f/classsixteenBitNormalization.html#ac64ea3c298f3510451081f1e1770dca6',1,'sixteenBitNormalization::processBuffer()']]]
+];

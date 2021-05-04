@@ -1,0 +1,72 @@
+\hypertarget{classsixteenBitNoiseGate}{}\section{sixteen\+Bit\+Noise\+Gate Class Reference}
+\label{classsixteenBitNoiseGate}\index{sixteen\+Bit\+Noise\+Gate@{sixteen\+Bit\+Noise\+Gate}}
+
+
+Inheritance diagram for sixteen\+Bit\+Noise\+Gate\+:
+% FIG 0
+
+
+Collaboration diagram for sixteen\+Bit\+Noise\+Gate\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classsixteenBitNoiseGate_a27bdf787a56e96e7b6ff3f2edd86ca82}{process\+Buffer} (T $\ast$buffer, int buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Takes in a buffer of any datatype and creates a noise gate to help filter out back ground noise for 16 bit files. \end{DoxyCompactList}\item 
+\hyperlink{classsixteenBitNoiseGate_a5582db482e8dc25fd8962d8c28ac04e2}{sixteen\+Bit\+Noise\+Gate} (uint16\+\_\+t threshold)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Construct a new eight Bit Noise Gate object 
+\end{DoxyItemize}\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsixteenBitNoiseGate_a5582db482e8dc25fd8962d8c28ac04e2}\label{classsixteenBitNoiseGate_a5582db482e8dc25fd8962d8c28ac04e2}} 
+\index{sixteen\+Bit\+Noise\+Gate@{sixteen\+Bit\+Noise\+Gate}!sixteen\+Bit\+Noise\+Gate@{sixteen\+Bit\+Noise\+Gate}}
+\index{sixteen\+Bit\+Noise\+Gate@{sixteen\+Bit\+Noise\+Gate}!sixteen\+Bit\+Noise\+Gate@{sixteen\+Bit\+Noise\+Gate}}
+\subsubsection{\texorpdfstring{sixteen\+Bit\+Noise\+Gate()}{sixteenBitNoiseGate()}}
+{\footnotesize\ttfamily sixteen\+Bit\+Noise\+Gate\+::sixteen\+Bit\+Noise\+Gate (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{threshold }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item Construct a new eight Bit Noise Gate object 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & -\/ uint16\+\_\+t data type is the same as unsigned char \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsixteenBitNoiseGate_a27bdf787a56e96e7b6ff3f2edd86ca82}\label{classsixteenBitNoiseGate_a27bdf787a56e96e7b6ff3f2edd86ca82}} 
+\index{sixteen\+Bit\+Noise\+Gate@{sixteen\+Bit\+Noise\+Gate}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!sixteen\+Bit\+Noise\+Gate@{sixteen\+Bit\+Noise\+Gate}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void sixteen\+Bit\+Noise\+Gate\+::process\+Buffer (\begin{DoxyParamCaption}\item[{T $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Takes in a buffer of any datatype and creates a noise gate to help filter out back ground noise for 16 bit files. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ Should be signed short to process 16 bit file. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ Can be any data type pointer due to template. \\
+\hline
+{\em buffer\+Size} & -\/ integer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sixteen\+Bit\+Noise\+Gate.\+h\end{DoxyCompactItemize}

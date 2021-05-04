@@ -1,0 +1,72 @@
+\hypertarget{classeightBitNoiseGate}{}\section{eight\+Bit\+Noise\+Gate Class Reference}
+\label{classeightBitNoiseGate}\index{eight\+Bit\+Noise\+Gate@{eight\+Bit\+Noise\+Gate}}
+
+
+Inheritance diagram for eight\+Bit\+Noise\+Gate\+:
+% FIG 0
+
+
+Collaboration diagram for eight\+Bit\+Noise\+Gate\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classeightBitNoiseGate_a2ae5893814bd427a1607e933ee733c48}{process\+Buffer} (T $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em Takes in a buffer of any datatype and creates a noise gate to help filter out back ground noise for 8 bit files. \end{DoxyCompactList}\item 
+\hyperlink{classeightBitNoiseGate_aa85cf07021d253d61b219a3de9cbaf9b}{eight\+Bit\+Noise\+Gate} (uint8\+\_\+t threshold)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Construct a new eight Bit Noise Gate object 
+\end{DoxyItemize}\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classeightBitNoiseGate_aa85cf07021d253d61b219a3de9cbaf9b}\label{classeightBitNoiseGate_aa85cf07021d253d61b219a3de9cbaf9b}} 
+\index{eight\+Bit\+Noise\+Gate@{eight\+Bit\+Noise\+Gate}!eight\+Bit\+Noise\+Gate@{eight\+Bit\+Noise\+Gate}}
+\index{eight\+Bit\+Noise\+Gate@{eight\+Bit\+Noise\+Gate}!eight\+Bit\+Noise\+Gate@{eight\+Bit\+Noise\+Gate}}
+\subsubsection{\texorpdfstring{eight\+Bit\+Noise\+Gate()}{eightBitNoiseGate()}}
+{\footnotesize\ttfamily eight\+Bit\+Noise\+Gate\+::eight\+Bit\+Noise\+Gate (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{threshold }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item Construct a new eight Bit Noise Gate object 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & -\/ uint8\+\_\+t data type is the same as unsigned char \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeightBitNoiseGate_a2ae5893814bd427a1607e933ee733c48}\label{classeightBitNoiseGate_a2ae5893814bd427a1607e933ee733c48}} 
+\index{eight\+Bit\+Noise\+Gate@{eight\+Bit\+Noise\+Gate}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!eight\+Bit\+Noise\+Gate@{eight\+Bit\+Noise\+Gate}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void eight\+Bit\+Noise\+Gate\+::process\+Buffer (\begin{DoxyParamCaption}\item[{T $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+Takes in a buffer of any datatype and creates a noise gate to help filter out back ground noise for 8 bit files. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & -\/ Should be unsigned char to process 8 bit file. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ Can be any data type pointer due to template. \\
+\hline
+{\em buffer\+Size} & -\/ integer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+eight\+Bit\+Noise\+Gate.\+h\end{DoxyCompactItemize}

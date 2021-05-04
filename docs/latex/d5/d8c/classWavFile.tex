@@ -1,0 +1,84 @@
+\hypertarget{classWavFile}{}\section{Wav\+File Class Reference}
+\label{classWavFile}\index{Wav\+File@{Wav\+File}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classWavFile_ac8b9d7fa3bb2d06b6d089089fc48ee5a}{read\+File} (const std\+::string \&file\+Name)
+\item 
+void \hyperlink{classWavFile_ab057c127fb35388e9a49e5b37b9088ad}{write\+File} (const std\+::string \&out\+File\+Name)
+\item 
+virtual \hyperlink{classWavFile_ad21c277f6ba3cc6e8ce1b3fe92f3243d}{$\sim$\+Wav\+File} ()
+\item 
+unsigned char $\ast$ \hyperlink{classWavFile_afaf8f58b0c3732079644a366b39f5c28}{get\+Buffer} ()
+\item 
+short $\ast$ \hyperlink{classWavFile_ad8f9daefb75a9467c499eb27b4e3ec73}{get\+Short\+Buffer} ()
+\item 
+int \hyperlink{classWavFile_aced9840645cf59cffc1c96f0d44575fe}{get\+Buffer\+Size} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWavFile_ad21c277f6ba3cc6e8ce1b3fe92f3243d}\label{classWavFile_ad21c277f6ba3cc6e8ce1b3fe92f3243d}} 
+\index{Wav\+File@{Wav\+File}!````~Wav\+File@{$\sim$\+Wav\+File}}
+\index{````~Wav\+File@{$\sim$\+Wav\+File}!Wav\+File@{Wav\+File}}
+\subsubsection{\texorpdfstring{$\sim$\+Wav\+File()}{~WavFile()}}
+{\footnotesize\ttfamily Wav\+File\+::$\sim$\+Wav\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+destroy the buffers if they still hold data 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWavFile_afaf8f58b0c3732079644a366b39f5c28}\label{classWavFile_afaf8f58b0c3732079644a366b39f5c28}} 
+\index{Wav\+File@{Wav\+File}!get\+Buffer@{get\+Buffer}}
+\index{get\+Buffer@{get\+Buffer}!Wav\+File@{Wav\+File}}
+\subsubsection{\texorpdfstring{get\+Buffer()}{getBuffer()}}
+{\footnotesize\ttfamily unsigned char $\ast$ Wav\+File\+::get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get buffer \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWavFile_aced9840645cf59cffc1c96f0d44575fe}\label{classWavFile_aced9840645cf59cffc1c96f0d44575fe}} 
+\index{Wav\+File@{Wav\+File}!get\+Buffer\+Size@{get\+Buffer\+Size}}
+\index{get\+Buffer\+Size@{get\+Buffer\+Size}!Wav\+File@{Wav\+File}}
+\subsubsection{\texorpdfstring{get\+Buffer\+Size()}{getBufferSize()}}
+{\footnotesize\ttfamily int Wav\+File\+::get\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the size of the buffer \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWavFile_ad8f9daefb75a9467c499eb27b4e3ec73}\label{classWavFile_ad8f9daefb75a9467c499eb27b4e3ec73}} 
+\index{Wav\+File@{Wav\+File}!get\+Short\+Buffer@{get\+Short\+Buffer}}
+\index{get\+Short\+Buffer@{get\+Short\+Buffer}!Wav\+File@{Wav\+File}}
+\subsubsection{\texorpdfstring{get\+Short\+Buffer()}{getShortBuffer()}}
+{\footnotesize\ttfamily short $\ast$ Wav\+File\+::get\+Short\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get buffer from 16 bit wav file \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWavFile_ac8b9d7fa3bb2d06b6d089089fc48ee5a}\label{classWavFile_ac8b9d7fa3bb2d06b6d089089fc48ee5a}} 
+\index{Wav\+File@{Wav\+File}!read\+File@{read\+File}}
+\index{read\+File@{read\+File}!Wav\+File@{Wav\+File}}
+\subsubsection{\texorpdfstring{read\+File()}{readFile()}}
+{\footnotesize\ttfamily void Wav\+File\+::read\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+Reads a file and stores data in a buffer 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & -\/ string to store file\+Name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWavFile_ab057c127fb35388e9a49e5b37b9088ad}\label{classWavFile_ab057c127fb35388e9a49e5b37b9088ad}} 
+\index{Wav\+File@{Wav\+File}!write\+File@{write\+File}}
+\index{write\+File@{write\+File}!Wav\+File@{Wav\+File}}
+\subsubsection{\texorpdfstring{write\+File()}{writeFile()}}
+{\footnotesize\ttfamily void Wav\+File\+::write\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{out\+File\+Name }\end{DoxyParamCaption})}
+
+Writes over file with new information stored 
+\begin{DoxyParams}{Parameters}
+{\em out\+File\+Name} & -\/ a string to store the new file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wav\+File.\+h\item 
+wav\+File.\+cpp\end{DoxyCompactItemize}
