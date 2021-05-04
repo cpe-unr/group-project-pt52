@@ -23,7 +23,7 @@ public:
 
     template <typename T>
 
-    void processBuffer(T *buffer, int bufferSize){
+    void processBuffer(T *buffer, int bufferSize) override{
         float num;
         float delayNum;
         float echoLevel = 0.5f;

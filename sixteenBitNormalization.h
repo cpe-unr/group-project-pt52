@@ -21,7 +21,7 @@ public:
 
     template <typename T>
 
-   void processBuffer(T *buffer, int bufferSize){
+   void processBuffer(T *buffer, int bufferSize) override{
         string max = buffer[0];
         int x;
         

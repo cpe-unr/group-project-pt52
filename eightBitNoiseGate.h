@@ -23,7 +23,7 @@ public:
 
 	template <typename T>
 
-	void processBuffer(T *buffer, int bufferSize){
+	void processBuffer(T *buffer, int bufferSize) override{
 
 		for(int i = 1; i < bufferSize; i++){
         	if(buffer[i] > (ZERO - threshold) && buffer[i] < (ZERO + threshold)){

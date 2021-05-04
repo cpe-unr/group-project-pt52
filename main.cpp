@@ -36,8 +36,20 @@ void fn(){
 #include "wavFile.h"
 #include "wavHeader.h"
 #include "userInter.h"
-#include "echo.h"
-#include "noiseGate.h"
+#include "eightBitEcho.h"
+#include "eightBitNoiseGate.h"
+#include "eightBitNormalizaton.h"
+#include "sixteenBitEcho.h"
+#include "sixteenBitNoiseGate.h"
+#include "sixteenBitNormalization.h"
+
+/**
+ * @brief - main function uses command line arguments to open audio files and calls the appropriate functions to view/edit metadata and to process the audio files.
+ * 
+ * @param argc - char **
+ * @param argv - integer
+ * @return int 
+ */
 
 int main(int argc, char** argv) {
 
@@ -62,37 +74,71 @@ int main(int argc, char** argv) {
             
         std::cin >> proc;
 
-        if(proc == "echo") {
+        if(proc == "eightbitecho") {
 
             WavFile wav;
             wav.readFile(argv[1]);
-            IProcessable *processor = new Echo();
+            IProcessable *processor = new eightBitEcho();
             processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
             wav.writeFile(argv[1]); 
 
-            delete Echo();
+            delete eightBitEcho();
 
         }
-        if(proc == "normalization") {
+        if(proc == "eightbitnormalization") {
 
             WavFile wav;
             wav.readFile(argv[1]);
-            IProcessable *processor = new Normalization();
+            IProcessable *processor = new eightBitNormalization();
             processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
             wav.writeFile(argv[1]); 
 
-            delete Normalization();
+            delete eightBitNormalization();
 
         }
-        if(proc == "noisegate") {
+        if(proc == "eightbitnoisegate") {
 
             WavFile wav;
             wav.readFile(argv[1]);
-            IProcessable *processor = new NoiseGate();
+            IProcessable *processor = new eightBitNoiseGate();
             processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
             wav.writeFile(argv[1]); 
 
-            delete NoiseGate();
+            delete eightBitNoiseGate();
+
+        }
+
+        if(proc == "sixteenbitecho") {
+
+            WavFile wav;
+            wav.readFile(argv[1]);
+            IProcessable *processor = new sixteenBitEcho();
+            processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
+            wav.writeFile(argv[1]); 
+
+            delete sixteenBitEcho();
+
+        }
+        if(proc == "sixteenbitnormalization") {
+
+            WavFile wav;
+            wav.readFile(argv[1]);
+            IProcessable *processor = new sixteenBitNormalization();
+            processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
+            wav.writeFile(argv[1]); 
+
+            delete sixteenBitNormalization();
+
+        }
+        if(proc == "sixteenbitnoisegate") {
+
+            WavFile wav;
+            wav.readFile(argv[1]);
+            IProcessable *processor = new sixteenBitNoiseGate();
+            processor->processBuffer(wav.getBuffer(),wav.getBufferSize());
+            wav.writeFile(argv[1]); 
+
+            delete sixteenBitNoiseGate();
 
         }
             
