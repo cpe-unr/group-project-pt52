@@ -1,3 +1,7 @@
+//  group: PT52
+//  author: Charlotte Moreland
+//  assignment: final group project
+
 #ifndef USERINTER_H
 #define USERINTER_H
 

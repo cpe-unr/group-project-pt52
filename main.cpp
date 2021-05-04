@@ -1,4 +1,5 @@
-//  author: Charlotte Moreland
+//  group: PT52
+//  authors: Charlotte Moreland, Wyatt Young
 //  assignment: final group project
 
 /** @file */
@@ -50,7 +51,6 @@ int main(int argc, char** argv) {
 
     //  Seg fault when opening directory
     Directory::list_dir(argv[1]);
-
 
     UserInter::modMeta();
 
